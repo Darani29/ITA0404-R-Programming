@@ -1,0 +1,11 @@
+# Create a 3D array
+arr <- array(1:24, dim = c(3, 4, 2))
+# Assign row, column, and table names
+dimnames(arr) <- list(
+  Row = c("R1", "R2", "R3"),
+  Column = c("C1", "C2", "C3", "C4"),
+  Table = c("Table1", "Table2")
+)
+# Display the array
+cat("3D Array:\n")
+print(arr)
