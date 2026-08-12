@@ -1,0 +1,22 @@
+data_vector_1 <- c(1, 2, 3, 4, 5, 6)
+data_vector_2 <- c(7, 8, 9, 10, 11, 12)
+combined_data <- c(data_vector_1, data_vector_2)
+row_names <- c("Row1", "Row2")
+col_names <- c("Col1", "Col2", "Col3")
+matrix_names <- c("Matrix1", "Matrix2")
+my_array <- array(combined_data, dim = c(2, 3, 2),dimnames = list(row_names, col_names, matrix_names))
+# Print the entire array
+print(my_array)
+# Print Specific Elements
+
+# Example A: Access a single element by its dimension names (Row1, Col2, Matrix1)
+print(my_array["Row1", "Col2", "Matrix1"])
+
+# Example B: Access an entire row across all columns and matrices
+print(my_array["Row1", , ])
+
+# Example C: Access an entire column (Col3) from the second matrix
+print(my_array[, "Col3", "Matrix2"])
+
+# Example D: Access elements using numerical indices [row, column, matrix]
+print(my_array[2, 1, 2])
