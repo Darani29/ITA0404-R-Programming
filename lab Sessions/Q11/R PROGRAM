@@ -1,0 +1,15 @@
+# Create data
+exam_data <- data.frame(
+  name = c("John", "Mary", "David", "Anu"),
+  score = c(85, 92, 78, 95),
+  attempts = c(1, 2, 3, 1),
+  qualify = c(TRUE, TRUE, FALSE, TRUE)
+)
+
+# Save as CSV
+write.csv(exam_data, "exam_data.csv", row.names = FALSE)
+# Read CSV file
+exam_data <- read.csv("exam_data.csv")
+
+# Display contents
+print(exam_data)
