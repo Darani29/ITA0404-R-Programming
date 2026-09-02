@@ -1,1 +1,39 @@
+# Input data
+x <- c(10, 20, 15, 25, 30, 18, 22)
+y <- c(12, 18, 20, 28, 25, 22, 30)
+
+# Boxplot
+boxplot(x,
+        main = "Boxplot",
+        ylab = "Values",
+        col = "lightblue")
+
+# Histogram
+hist(x,
+     main = "Histogram",
+     xlab = "Values",
+     col = "lightgreen",
+     border = "black")
+
+# Bar plot
+barplot(x,
+        main = "Bar Plot",
+        xlab = "Index",
+        ylab = "Values",
+        col = "orange")
+
+# Line chart
+plot(x, type = "o",
+     main = "Line Chart",
+     xlab = "Index",
+     ylab = "Values",
+     col = "blue")
+
+# Scatter plot
+plot(x, y,
+     main = "Scatter Plot",
+     xlab = "X",
+     ylab = "Y",
+     pch = 19,
+     col = "red")
 
