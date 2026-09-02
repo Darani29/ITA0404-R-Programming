@@ -1,1 +1,10 @@
+# exp 13
+# Create two arrays
+A <- matrix(1:6, nrow = 2)
+B <- matrix(7:12, nrow = 2)
 
+# Combine arrays row-wise
+result <- rbind(A, B)
+
+# Display result
+print(result)
