@@ -1,1 +1,27 @@
+# exp 12 
+# Load required package
+library(reshape2)
 
+# Load airquality dataset
+data(airquality)
+
+# Melt the data
+melted_data <- melt(
+  airquality,
+  id.vars = "Month",
+  measure.vars = c("Ozone", "Solar.R", "Wind", "Temp")
+)
+
+# Display melted data
+print(melted_data)
+
+# Cast the data and calculate monthly averages
+monthly_avg <- dcast(
+  melted_data,
+  Month ~ variable,
+  fun.aggregate = mean,
+  na.rm = TRUE
+)
+
+# Display monthly averages
+print(monthly_avg)
